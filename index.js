@@ -1,6 +1,4 @@
-
 class Heroi {
-
   constructor(nome, idade, tipo) {
     this.nome = nome;
     this.idade = idade;
@@ -8,26 +6,42 @@ class Heroi {
   }
 
   atacar() {
+    let ataque;
+
     if (this.tipo === 'mago') {
-      console.log(`O ${this.tipo} ${this.nome} atacou usando magia.`);
+      ataque = 'usou magia';
     } else if (this.tipo === 'guerreiro') {
-      console.log(`O ${this.tipo} ${this.nome} atacou usando sua espada.`);
+      ataque = 'usou espada';
     } else if (this.tipo === 'monge') {
-      console.log(`O ${this.tipo} ${this.nome} usou artes marciais`);
+      ataque = 'usou artes marciais';
+    } else if (this.tipo === 'ninja') {
+      ataque = 'usou shuriken';
     } else {
-      console.log(` ninja : ${this.tipo} usou shuriken.`);
+     
     }
+
+    console.log(`O ${this.tipo} ${this.nome} atacou usando ${ataque}`);
+    
+    return `O ${this.tipo} ${this.nome} atacou usando ${ataque}`;
   }
 }
 
 const mago = new Heroi('', 100, 'mago');
-const guerreiro = new Heroi('', 100, 'guerreiro');
-const monge = new Heroi('', 100, 'monge');
-const ninja = new Heroi('', 100, 'ninja');
 
-mago.atacar();
+// const guerreiro = new Heroi('', 100, 'guerreiro');
+// const monge = new Heroi('', 100, 'monge');
+// const ninja = new Heroi('', 100, 'ninja');
 
 
-// guerreiro.atacar();
-// monge.atacar();
-// ninja.atacar();
+
+console.log(mago.atacar());
+
+
+// console.log(guerreiro.atacar());
+// console.log(monge.atacar());
+// console.log(ninja.atacar());
+
+
+
+
+
