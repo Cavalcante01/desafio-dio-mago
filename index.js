@@ -26,7 +26,7 @@ class Heroi {
   }
 }
 
-const mago = new Heroi('mago', 30, 'mago');
+const mago = new Heroi('alex', 38, 'mago');
 
 console.log(mago.atacar());
 
